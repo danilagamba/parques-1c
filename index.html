@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parques 1C - Conjunto Residencial Sabana Grande 3</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Parques 1C</h1>
+        <h2>Conjunto Residencial Sabana Grande 3</h2>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#registro">Registro de Usuario</a></li>
+            <li><a href="#pagos">Gestión de Pagos</a></li>
+            <li><a href="#historial">Historial de Pagos</a></li>
+            <li><a href="#configuracion">Configuración de Usuario</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section id="home">
+            <h2>Bienvenido a Parques 1C</h2>
+            <p>Gestiona tus datos y pagos de manera fácil y segura.</p>
+        </section>
+        
+        <section id="registro">
+            <h2>Registro de Usuario</h2>
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+                
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <button type="submit">Registrar</button>
+            </form>
+        </section>
+        
+        <section id="pagos">
+            <h2>Gestión de Pagos</h2>
+            <form>
+                <label for="monto">Monto:</label>
+                <input type="number" id="monto" name="monto" required>
+                
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" required>
+                
+                <button type="submit">Pagar</button>
+            </form>
+        </section>
+        
+        <section id="historial">
+            <h2>Historial de Pagos</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Monto</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2024-06-01</td>
+                        <td>$100.00</td>
+                        <td>Pagado</td>
+                    </tr>
+                    <tr>
+                        <td>2024-05-01</td>
+                        <td>$100.00</td>
+                        <td>Pagado</td>
+                    </tr>
+                    <!-- Más registros -->
+                </tbody>
+            </table>
+        </section>
+        
+        <section id="configuracion">
+            <h2>Configuración de Usuario</h2>
+            <form>
+                <label for="nombre-config">Nombre:</label>
+                <input type="text" id="nombre-config" name="nombre-config" required>
+                
+                <label for="correo-config">Correo Electrónico:</label>
+                <input type="email" id="correo-config" name="correo-config" required>
+                
+                <label for="password-config">Contraseña:</label>
+                <input type="password" id="password-config" name="password-config" required>
+                
+                <button type="submit">Guardar Cambios</button>
+            </form>
+        </section>
+
+            <section id="novedades1" class="novedades">
+            <h2>Novedad 1</h2>
+            <p>Descripción de la novedad 1...</p>
+        </section>
+        <section id="novedades2" class="novedades">
+            <h2>Novedad 2</h2>
+            <p>Descripción de la novedad 2...</p>
+        </section>
+        <section id="novedades3" class="novedades">
+            <h2>Novedad 3</h2>
+            <p>Descripción de la novedad 3...</p>
+        </section>
+    
+    </main>
+                   
+    <footer>
+        <p>&copy; 2024 Parques 1C - Conjunto Residencial Sabana Grande 3</p>
+    </footer>
+</body>
+</html>
