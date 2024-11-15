@@ -1,0 +1,37 @@
+package com.parques1c.controller;
+
+import com.parques1c.model.Usuario;
+import com.parques1c.service.UsuarioService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/api/usuarios")
+public class UsuarioController {
+
+    @Autowired
+    private UsuarioService usuarioService;
+
+    // Registro de usuarios
+    @PostMapping("/registrar")
+    public ResponseEntity<?> registrarUsuario(@RequestBody Usuario usuario) {
+        try {
+            Usuario nuevoUsuario = usuarioService.registrarUsuario(usuario);
+            return ResponseEntity.ok(nuevoUsuario);
+        } catch (IllegalArgumentException e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
+
+    // Inicio de sesión
+    @PostMapping("/login")
+    public ResponseEntity<?> iniciarSesion(@RequestParam String email, @RequestParam String contraseña) {
+        try {
+            Usuario usuario = usuarioService.iniciarSesion(email, contraseña);
+            return ResponseEntity.ok(usuario);
+        } catch (IllegalArgumentException e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
+}
